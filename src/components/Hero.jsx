@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
@@ -11,16 +10,16 @@ const Hero = () => {
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 sm:h-40 h-20 violet-gradient" />
         </div>
-        <div>
+        <div className="hero-container">
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#915EFF]">Hamza</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            Crafting innovative web and mobile solutions
+          <p className={`${styles.heroSubText} text-white-100`}>
+            5+ years of experience with cloud technologies  
             <br className="sm:block hidden" />
-            that drive your business forward
+
           </p>
         </div>
       </div>

@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
-  mode: "jit",
+export default {
+  content: [
+    "./index.html",          // MUST include this
+    "./src/**/*.{js,jsx,ts,tsx}" // MUST include all source files
+  ],
   theme: {
     extend: {
       colors: {
@@ -24,4 +26,4 @@ module.exports = {
     },
   },
   plugins: [],
-};
+}

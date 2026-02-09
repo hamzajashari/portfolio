@@ -18,4 +18,12 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  overrides: [
+    {
+      files: ['src/components/gsap/**/*.jsx'], // R3F components folder
+      rules: {
+        'react/no-unknown-property': 'off',
+      },
+    },
+  ],
 }
