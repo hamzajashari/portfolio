@@ -187,7 +187,7 @@ export const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "net8.0",
+        name: "net10.0",
         color: "green-text-gradient",
       },
       {
@@ -196,7 +196,6 @@ export const projects = [
       },
     ],
     image: fsm,
-    source_code_link: "https://github.com/hamzajashari",
   },
   {
     name: "EVN Online",
@@ -225,7 +224,7 @@ export const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "net6.0",
+        name: "net10.0",
         color: "green-text-gradient",
       },
     ],
@@ -242,16 +241,12 @@ export const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "net6.0",
+        name: "net10.0",
         color: "green-text-gradient",
       },
       {
         name: "mudblazor",
         color: "pink-text-gradient",
-      },
-      {
-        name: "power-bi",
-        color: "yellow-text-gradient",
       },
     ],
     image: null,
@@ -267,12 +262,8 @@ export const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "net6.0",
+        name: "net10.0",
         color: "green-text-gradient",
-      },
-      {
-        name: "power-bi",
-        color: "yellow-text-gradient",
       },
     ],
     image: null,
