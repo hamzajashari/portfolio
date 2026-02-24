@@ -6,7 +6,7 @@ import {
   Hero,
   Navbar,
   Tech,
-  Works,
+  Projects,
   StarsCanvas,
 } from "./components";
 import { ToastContainer } from "react-toastify";
@@ -40,7 +40,7 @@ function App() {
           <Experience />
           <Tech />
           <div className="relative z-0">
-            <Works />
+            <Projects />
             <StarsCanvas />
           </div>
           <Contact />
