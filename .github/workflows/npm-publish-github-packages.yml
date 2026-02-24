@@ -27,7 +27,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BASE: ${{ vars.VITE_BASE }}
+          BASE: ${{ vars.BASE }}
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
