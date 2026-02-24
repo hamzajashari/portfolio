@@ -38,7 +38,7 @@ export function Meteors({
         id: i,
         left: i * (100 / count), // Evenly distribute across width
         delay: Math.random() * 5,
-        duration: 3 + Math.random() * 7,
+        duration: 5 + Math.random() * 7,
       })),
     )
   }, [count])

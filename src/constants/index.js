@@ -46,7 +46,7 @@ export const introduction =
 
 export const services = [
   {
-    title: "Full Stack Developer",
+    title: "Software Engineer",
 
     icon: web,
 
@@ -55,7 +55,7 @@ export const services = [
   },
 
   {
-    title: "DevOps Engineer",
+    title: "DevOps",
 
     icon: devops,
 
@@ -64,7 +64,7 @@ export const services = [
   },
 
   {
-    title: "Cloud & Infrastructure Engineer",
+    title: "Cloud & Infrastructure",
 
     icon: azure,
 
@@ -81,15 +81,19 @@ export const technologies = [
   },
 
   {
+    name: "React JS",
+
+    icon: reactjs,
+  },
+  {
     name: "TS",
 
     icon: typescript,
   },
-
   {
-    name: "React JS",
+    name: "JavaScript",
 
-    icon: reactjs,
+    icon: javascript,
   },
 
   {
@@ -114,24 +118,6 @@ export const technologies = [
     name: "Figma",
 
     icon: figma,
-  },
-
-  {
-    name: "HTML5",
-
-    icon: html,
-  },
-
-  {
-    name: "CSS3",
-
-    icon: css,
-  },
-
-  {
-    name: "JavaScript",
-
-    icon: javascript,
   },
 
   {

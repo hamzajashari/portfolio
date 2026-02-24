@@ -11,13 +11,12 @@ import {
 } from "./components";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AnimatedCursor from "react-animated-cursor"
+import AnimatedCursor from "react-animated-cursor";
 import { Meteors } from "./components/ui/meteors";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Meteors/>
+    <>
       <AnimatedCursor
         color="255,255,255"
         innerSize={8}
@@ -26,25 +25,28 @@ function App() {
         outerScale={1.7}
         outerAlpha={0}
         outerStyle={{
-          border: '3px solid #fff'
+          border: "3px solid #fff",
         }}
       />
-      <ToastContainer />
-      <div className="relative z-10 bg-primary">
-        <div className="bg-hero-pattern z-20 bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero/>
+      <BrowserRouter>
+        <ToastContainer />
+        <div className="relative z-10 bg-primary">
+          <Meteors />
+          <div className="bg-hero-pattern z-20 bg-cover bg-no-repeat bg-center">
+            <Navbar />
+            <Hero />
+          </div>
+          <About />
+          <Experience />
+          <Tech />
+          <div className="relative z-0">
+            <Works />
+            <StarsCanvas />
+          </div>
+          <Contact />
         </div>
-        <About />
-        <Experience />
-        <Tech />
-        <div className="relative z-0">
-          <Works />
-          <StarsCanvas />
-        </div>
-        <Contact />
-      </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    </>
   );
 }
 
