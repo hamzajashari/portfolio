@@ -135,7 +135,7 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "Senior Software Engineer",
+    title: "Software Engineer",
 
     company_name: "EVN",
 
