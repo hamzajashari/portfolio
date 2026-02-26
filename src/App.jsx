@@ -32,7 +32,7 @@ function App() {
         <ToastContainer />
         <div className="relative z-10 bg-primary">
           <Meteors />
-          <div className="bg-hero-pattern z-20 bg-cover bg-no-repeat bg-center">
+          <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
             <Navbar />
             <Hero />
           </div>
