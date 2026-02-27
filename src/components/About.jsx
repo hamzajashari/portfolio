@@ -49,7 +49,7 @@ const About = () => {
   }, [isInView, mainControls]);
 
   return (
-     <div ref={sectionRef} className="pt-[60px] md:pt-0 overflow-hidden">
+     <div ref={sectionRef} className="pt-[20px] md:pt-0 overflow-hidden">
       <motion.div
         initial="hidden"
         animate={mainControls}
@@ -72,7 +72,7 @@ const About = () => {
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
 
-      <div className="mt-10 flex flex-col md:flex-row items-center md:items-start gap-10">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
         <motion.div
           variants={fadeIn("right", "spring", 0.5, 0.75)}
           className="w-full md:w-1/3 flex flex-col items-center"
