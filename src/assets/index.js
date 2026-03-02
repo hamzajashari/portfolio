@@ -34,6 +34,9 @@ import tripguide from "./tripguide.png";
 import evnonline from "./project/evnonline.png";
 import dso from "./project/dso.png";
 import fsm from "./project/fsm.png";
+import inspection from "./project/inspection.png";
+import outage from "./project/outage.png";
+import library from "./project/library.png";
 import link from "./link.png";
 import sql from "./tech/sql.png";
 
@@ -61,6 +64,9 @@ export {
   evnonline,
   dso,
   fsm,
+  inspection,
+  outage,
+  library,
   javascript,
   mongodb,
   nodejs,
