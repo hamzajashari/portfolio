@@ -19,6 +19,9 @@ import {
   qinshift,
   coding,
   sql,
+  inspection,
+  outage,
+  library,
 } from "../assets";
 
 export const navLinks = [
@@ -48,7 +51,7 @@ export const navLinks = [
 ];
 
 export const introduction =
-  "Hey there! I'm a software engineer who's spent the last five years getting my hands dirty with .NET, Angular, and Azure DevOps. I love taking the headache out of software delivery—so I set up CI/CD pipelines for every project I touch, making builds, testing, and deployments smooth and automatic. I'm always designing and building web apps, connecting APIs, automating data flows, and creating user interfaces that feel great to use, whether that's in React, Angular, or Blazor. I also roll up my sleeves with Terraform to set up Azure services, so cloud infrastructure is a breeze and can grow with your needs. My favorite part? Blending DevOps, cloud know-how, and development skills to build solutions that just work—reliably, efficiently, and in ways that make a real difference.";
+  "I am a results-driven Software Engineer with over five years of experience specializing in .NET, Angular, and Azure DevOps. I am passionate about streamlining software delivery through robust CI/CD pipelines, ensuring seamless builds, testing, and deployments. My expertise spans building scalable web applications, integrating complex APIs, and designing intuitive user interfaces using React, Angular, and Blazor. Additionally, I leverage Terraform for Infrastructure as Code (IaC) to manage secure and scalable Azure environments. I thrive at the intersection of DevOps and development, building reliable, high-performance solutions that drive real-world impact.";
 
 export const services = [
   {
@@ -199,47 +202,6 @@ export const experiences = [
   },
 ];
 
-export const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-
-    name: "Sara Lee",
-
-    designation: "CFO",
-
-    company: "Acme Co",
-
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-
-    name: "Chris Brown",
-
-    designation: "COO",
-
-    company: "DEF Corp",
-
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-
-    name: "Lisa Wang",
-
-    designation: "CTO",
-
-    company: "456 Enterprises",
-
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 export const projects = [
   {
     name: "Field Service Management System",
@@ -314,7 +276,7 @@ export const projects = [
       { name: "Power BI", color: "orange-text-gradient" },
     ],
 
-    image: null,
+    image: inspection,
   },
 
   {
@@ -331,7 +293,7 @@ export const projects = [
       { name: "Data Visualization", color: "pink-text-gradient" },
     ],
 
-    image: null,
+    image: outage,
   },
 
   {
@@ -348,6 +310,6 @@ export const projects = [
       { name: "PostgreSQL", color: "blue-text-gradient" },
     ],
 
-    image: null,
+    image: library,
   },
 ];
