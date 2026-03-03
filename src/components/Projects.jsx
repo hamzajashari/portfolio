@@ -9,6 +9,12 @@ import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
+import { useAnimations } from "../hooks/useScrollAnimation";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const ProjectCard = ({
   index,
   name,
@@ -68,6 +74,17 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
+  const { containerRef } = useAnimations(() => {
+    gsap.from(".project-header", {
+      scrollTrigger: { trigger: ".project-header", start: "top 85%" },
+      y: 30, opacity: 0, duration: 1, ease: "power3.out", stagger: 0.2,
+    });
+    gsap.from(".project-card-container", {
+      scrollTrigger: { trigger: ".project-card-container", start: "top 85%" },
+      scale: 0.8, opacity: 0, duration: 1, ease: "back.out(1.7)", stagger: 0.1,
+    });
+  });
+
   const breakpointColumnsObj = {
     default: 3,
     1100: 3,
@@ -76,17 +93,17 @@ const Projects = () => {
   };
 
   return (
-    <div>
-      <div>
+    <div ref={containerRef}>
+      <div className="project-header">
         <p className={`${styles.sectionSubText} `}>My work</p>
       </div>
-      <div>
+      <div className="project-header">
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </div>
 
       <Masonry
         breakpointCols={breakpointColumnsObj}
-        className="my-masonry-grid mt-8"
+        className="my-masonry-grid mt-8 project-card-container"
         columnClassName="my-masonry-grid_column"
       >
         {projects.map((project, index) => (
