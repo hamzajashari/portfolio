@@ -7,10 +7,6 @@ import React, {
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useAnimations } from "../hooks/useScrollAnimation";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 import { styles } from "../style";
@@ -21,7 +17,7 @@ import { textVariant, fadeIn } from "../utils/motion";
 const ExperienceCard = React.memo(
   ({ experience, isActive, onClick, index }) => {
     return (
-      <motion.div
+      <div
         variants={fadeIn("right", "spring", index * 0.1, 0.5)}
         className={`flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${isActive ? "bg-tertiary" : "bg-primary"
           }`}
@@ -50,14 +46,14 @@ const ExperienceCard = React.memo(
             {experience.company_name}
           </p>
         </div>
-      </motion.div>
+      </div>
     );
   },
 );
 
 const ExperienceDetails = React.memo(({ experience }) => {
   return (
-    <motion.div
+    <div
       key={experience.company_name}
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
@@ -82,7 +78,7 @@ const ExperienceDetails = React.memo(({ experience }) => {
           </li>
         ))}
       </ul>
-    </motion.div>
+    </div>
   );
 });
 
@@ -137,14 +133,12 @@ const Experience = () => {
           </div>
         </div>
         <div className="md:w-2/3">
-          <AnimatePresence mode="wait" initial={false}>
             {!isPending && (
               <ExperienceDetails
                 key={currentExperience.company_name}
                 experience={currentExperience}
               />
             )}
-          </AnimatePresence>
         </div>
       </div>
     </div>

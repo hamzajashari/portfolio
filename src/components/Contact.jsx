@@ -1,7 +1,6 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useState, useCallback, useEffect } from "react";
-import { motion } from "framer-motion";
 import { useAnimations } from "../hooks/useScrollAnimation";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -137,7 +136,7 @@ const Contact = () => {
           onConfettiComplete={handleConfettiComplete}
         />
       )}
-      <motion.div
+      <div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
@@ -213,14 +212,14 @@ const Contact = () => {
             )}
           </button>
         </form>
-      </motion.div>
+      </div>
 
-      <motion.div
+      <div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
       >
         <EarthCanvas />
-      </motion.div>
+      </div>
     </div>
   );
 };
