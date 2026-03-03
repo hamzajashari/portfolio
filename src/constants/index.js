@@ -22,6 +22,8 @@ import {
   inspection,
   outage,
   library,
+  insuranceApi,
+  portfolio,
 } from "../assets";
 
 export const navLinks = [
@@ -311,5 +313,36 @@ export const projects = [
     ],
 
     image: library,
+    source_code_link: "https://github.com/mkjasha/Library-Management-System",
+  },
+
+  {
+  name: "Insurance Claims Management API",
+
+  description:
+    "Production-ready multi-tier ASP.NET Core Web API for managing insurance claims and covers. Implemented Clean Architecture, service layer abstractions, repository pattern, progressive premium calculation logic, and asynchronous auditing using Azure Service Bus with background processing.",
+
+  tags: [
+    { name: "asp.net-core", color: "green-text-gradient" },
+    { name: "azure-service-bus", color: "pink-text-gradient" },
+    { name: "clean-architecture", color: "blue-text-gradient" },
+  ],
+
+  image: insuranceApi,
+
+  source_code_link: "https://github.com/hamzajashari/Insurance",
+},
+ {
+    name: "Personal Portfolio",
+    description:
+      "My personal portfolio website showcasing projects, skills, and experience. Built with modern web technologies, responsive design, and interactive UI components to highlight my work effectively.",
+    tags: [
+      { name: "React.js", color: "blue-text-gradient" },
+      { name: "Tailwind CSS", color: "pink-text-gradient" },
+      { name: "TypeScript", color: "orange-text-gradient" },
+      { name: "GSAP", color: "green-text-gradient" },
+    ],
+    image: portfolio,
+    source_code_link: "https://github.com/hamzajashari/portfolio",
   },
 ];

@@ -37,7 +37,10 @@ import fsm from "./project/fsm.png";
 import inspection from "./project/inspection.png";
 import outage from "./project/outage.png";
 import library from "./project/library.png";
+import insuranceApi from "./project/insuranceApi.png";
+import portfolio from "./project/portfolio.png";
 import link from "./link.png";
+
 import sql from "./tech/sql.png";
 
 export {
@@ -67,7 +70,9 @@ export {
   inspection,
   outage,
   library,
+  insuranceApi,
   javascript,
+  portfolio,
   mongodb,
   nodejs,
   reactjs,
