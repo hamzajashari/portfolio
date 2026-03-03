@@ -1,3 +1,5 @@
+import Masonry from "react-masonry-css";
+import React from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 
@@ -23,7 +25,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+        className="bg-tertiary p-5 rounded-2xl w-full"
       >
         {image != null && (
           <div className="relative w-full h-[230px] mb-5">
@@ -47,8 +49,8 @@ const ProjectCard = ({
             </div>
           </div>
         )}
-          <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        <h3 className="text-white font-bold text-[24px]">{name}</h3>
+        <p className="mt-2 text-secondary text-[14px]">{description}</p>
 
         <div className="mt-4 flex flex-wrap gap-2">
           {tags.map((tag) => (
@@ -66,19 +68,34 @@ const ProjectCard = ({
 };
 
 const Projects = () => {
-  return (
-    <>
-      <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
-      </motion.div>
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 3,
+    1000: 2,
+    600: 1
+  };
 
-      <div className="mt-4 flex flex-wrap gap-7">
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+  return (
+    <div>
+      <div>
+        <p className={`${styles.sectionSubText} `}>My work</p>
       </div>
-    </>
+      <div>
+        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+      </div>
+
+      <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="my-masonry-grid mt-8"
+        columnClassName="my-masonry-grid_column"
+      >
+        {projects.map((project, index) => (
+          <div key={`project-${index}`} className="masonry-item">
+            <ProjectCard index={index} {...project} />
+          </div>
+        ))}
+      </Masonry>
+    </div>
   );
 };
 

@@ -1,9 +1,23 @@
+import React from "react";
+import gsap from "gsap";
 import { motion } from "framer-motion";
 import { styles } from "../style";
 import { ComputersCanvas } from "./canvas";
+import { useAnimations } from "../hooks/useScrollAnimation";
+
 const Hero = () => {
+  const { containerRef } = useAnimations(() => {
+    gsap.from(".hero-text", {
+      y: 100,
+      opacity: 0,
+      duration: 1.5,
+      ease: "power4.out",
+      stagger: 0.2,
+    });
+  });
+
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section ref={containerRef} className="relative w-full h-screen mx-auto">
       <div
         className={`${styles.paddingX} absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5`}
       >
@@ -12,10 +26,10 @@ const Hero = () => {
           <div className="w-1 sm:h-40 h-20 violet-gradient" />
         </div>
         <div className="hero-container">
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <h1 className={`${styles.heroHeadText} text-white hero-text`}>
             Hi, I'm <span className="text-[#915EFF]">Hamza</span>
           </h1>
-          <p className={`${styles.heroSubText} text-white-100`}>
+          <p className={`${styles.heroSubText} text-white-100 hero-text`}>
             5+ years of experience with cloud technologies
             <br className="sm:block hidden" />
           </p>

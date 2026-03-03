@@ -1,7 +1,10 @@
-"use client";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useAnimations } from "../hooks/useScrollAnimation";
+
+gsap.registerPlugin(ScrollTrigger);
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "react-hot-toast";
 import Confetti from "react-confetti";
@@ -22,6 +25,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
+  const { containerRef } = useAnimations(() => {
+    gsap.from(".contact-header", {
+      scrollTrigger: { trigger: ".contact-header", start: "top 85%" },
+      y: 30, opacity: 0, duration: 1, ease: "power3.out", stagger: 0.2,
+    });
+  });
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
@@ -114,6 +124,7 @@ const Contact = () => {
 
   return (
     <div
+      ref={containerRef}
       className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
     >
       <Toaster />
@@ -130,8 +141,12 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className="flex-[0.75] bg-black-100 p-8 rounded-2xl"
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+        <div className="contact-header">
+          <p className={styles.sectionSubText}>Get in touch</p>
+        </div>
+        <div className="contact-header">
+          <h3 className={styles.sectionHeadText}>Contact.</h3>
+        </div>
 
         <form
           ref={formRef}

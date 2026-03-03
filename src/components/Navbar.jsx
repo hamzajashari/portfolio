@@ -9,13 +9,13 @@ const Navbar = () => {
 
   return (
     <nav
-    className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20`}
-    style={{ 
-      backgroundColor: 'rgba(5, 8, 22, 0.20)',
-      backdropFilter: 'blur(1px)',
-      WebkitBackdropFilter: 'blur(1px)', 
-    }}
-  >
+      className={`${styles.paddingX} w-full flex items-center py-4 fixed top-0 z-20`}
+      style={{
+        backgroundColor: 'rgba(5, 8, 22, 0.20)',
+        backdropFilter: 'blur(1px)',
+        WebkitBackdropFilter: 'blur(1px)',
+      }}
+    >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
         <Link
           to="/"
@@ -26,7 +26,8 @@ const Navbar = () => {
           }}
         >
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
-            HAMZA JASHARI
+            Hamza &nbsp;
+            <span className="sm:block hidden"> | Software Engineer</span>
           </p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10">
@@ -34,9 +35,8 @@ const Navbar = () => {
             return (
               <li
                 key={link.id}
-                className={`${
-                  active === link.title ? "text-white" : "text-secondary"
-                }hover:text-white text-[18px] 
+                className={`${active === link.title ? "text-white" : "text-secondary"
+                  } hover:text-white text-[18px] 
             font-medium cursor-pointer`}
                 onClick={() => setActive(link.title)}
               >
@@ -53,18 +53,16 @@ const Navbar = () => {
             onClick={() => setToggle(!toggle)}
           />
           <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            className={`${!toggle ? "hidden" : "flex"
+              } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
           >
             <ul className="list-none flex justify-end items-start flex-col gap-4">
               {navLinks.map((link) => {
                 return (
                   <li
                     key={link.id}
-                    className={`${
-                      active === link.title ? "text-white" : "text-secondary"
-                    }font-poppins font-medium cursor-pointer text-[16px]`}
+                    className={`${active === link.title ? "text-white" : "text-secondary"
+                      } font-poppins font-medium cursor-pointer text-[16px]`}
                     onClick={() => {
                       setToggle(!toggle);
                       setActive(link.title);

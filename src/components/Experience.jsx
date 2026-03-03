@@ -3,15 +3,16 @@ import React, {
   useCallback,
   useMemo,
   useTransition,
-  useRef,
-  useEffect,
 } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useAnimations } from "../hooks/useScrollAnimation";
 import {
   motion,
   AnimatePresence,
-  useAnimation,
-  useInView,
 } from "framer-motion";
+
+gsap.registerPlugin(ScrollTrigger);
 import { styles } from "../style";
 import { experiences } from "../constants";
 import { SectionWrapper } from "../hoc";
@@ -22,9 +23,8 @@ const ExperienceCard = React.memo(
     return (
       <motion.div
         variants={fadeIn("right", "spring", index * 0.1, 0.5)}
-        className={`flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${
-          isActive ? "bg-tertiary" : "bg-primary"
-        }`}
+        className={`flex items-center p-4 rounded-lg cursor-pointer transition-all duration-300 ${isActive ? "bg-tertiary" : "bg-primary"
+          }`}
         onClick={onClick}
         onKeyDown={(e) => e.key === "Enter" && onClick()}
         role="button"
@@ -89,9 +89,13 @@ const ExperienceDetails = React.memo(({ experience }) => {
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(0);
   const [isPending, startTransition] = useTransition();
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
-  const mainControls = useAnimation();
+
+  const { containerRef } = useAnimations(() => {
+    gsap.from(".exp-header", {
+      scrollTrigger: { trigger: ".exp-header", start: "top 85%" },
+      y: 30, opacity: 0, duration: 1, ease: "power3.out", stagger: 0.2,
+    });
+  });
 
   const handleExperienceClick = useCallback((index) => {
     startTransition(() => {
@@ -104,39 +108,19 @@ const Experience = () => {
     [activeExperience],
   );
 
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible");
-    }
-  }, [isInView, mainControls]);
-
   return (
-    <div ref={sectionRef}>
-      <motion.div
-        initial="hidden"
-        animate={mainControls}
-        variants={{
-          hidden: { opacity: 0, y: -20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-        }}
-      >
+    <div ref={containerRef}>
+      <div className="exp-header">
         <p className={`${styles.sectionSubText} text-center`}>
           My Professional Journey
         </p>
-      </motion.div>
+      </div>
 
-      <motion.div
-        initial="hidden"
-        animate={mainControls}
-        variants={{
-          hidden: { opacity: 0, y: -20 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-        }}
-      >
+      <div className="exp-header">
         <h2 className={`${styles.sectionHeadText} text-center`}>
           Work Experience
         </h2>
-      </motion.div>
+      </div>
 
       <div className="mt-20 flex flex-col md:flex-row gap-10">
         <div className="md:w-1/3">
