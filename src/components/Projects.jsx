@@ -63,7 +63,7 @@ const ProjectCard = ({
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
-              className={`text-[14px] ${tag.color}`}
+              className={`text-[14px] shadow-xl/20 ${tag.color}`}
             >
               #{tag.name}
             </p>

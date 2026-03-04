@@ -15,6 +15,100 @@ html {
   color-scheme: dark;
 }
 
+/* ========================= */
+/* OFFICIAL BRAND GRADIENTS */
+/* ========================= */
+
+/* Angular (Official Red) */
+.angular-text-gradient {
+  background: linear-gradient(to top, #b52e31, #dd0031);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* .NET (Purple) */
+.dotnet-text-gradient {
+  background: linear-gradient(to top, #512bd4, #6f42c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Azure (Blue) */
+.azure-text-gradient {
+  background: linear-gradient(to top, #0078d4, #00a4ef);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Azure Service Bus (same Azure family) */
+.azure-servicebus-text-gradient {
+  background: linear-gradient(to top, #005ba1, #0078d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Blazor (Purple/Blue) */
+.blazor-text-gradient {
+  background: linear-gradient(to top, #512bd4, #3c1d94);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SQL Server (Microsoft Red) */
+.sqlserver-text-gradient {
+  background: linear-gradient(to top, #a91d22, #cc2927);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Spring Boot (Green) */
+.spring-text-gradient {
+  background: linear-gradient(to top, #3f8f3f, #6db33f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* PostgreSQL (Blue) */
+.postgresql-text-gradient {
+  background: linear-gradient(to top, #1f6391, #336791);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* React (Cyan) */
+.react-text-gradient {
+  background: linear-gradient(to top, #087ea4, #61dafb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Tailwind (Teal) */
+.tailwind-text-gradient {
+  background: linear-gradient(to top, #0ea5e9, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* TypeScript (Blue) */
+.typescript-text-gradient {
+  background: linear-gradient(to top, #235a97, #3178c6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Power BI (Yellow) */
+.powerbi-text-gradient {
+  background: linear-gradient(to top, #d9a300, #f2c811);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Clean Architecture (Neutral modern gray) */
+.architecture-text-gradient {
+  background: linear-gradient(to top, #4b5563, #9ca3af);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .black-gradient {
   background: #000000;
   /* fallback for old browsers */

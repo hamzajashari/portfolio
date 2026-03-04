@@ -209,16 +209,13 @@ export const projects = [
     name: "Field Service Management System",
 
     description:
-      "Full-stack enterprise application for managing field technicians, work orders, time tracking, and automated invoicing. Designed to optimize operational workflows and reduce manual coordination between dispatchers and field staff.",
+      "Enterprise platform for managing field technicians, work orders, and invoicing. Built with Angular and .NET 8, integrated with Azure Service Bus, Azure Functions, and Azure AD for secure, scalable operations with centralized monitoring.",
 
     tags: [
-      { name: "Angular 17", color: "blue-text-gradient" },
-
-      { name: ".NET 8 Web API", color: "green-text-gradient" },
-
-      { name: "Tailwind CSS", color: "pink-text-gradient" },
-
-      { name: "SQL Server", color: "orange-text-gradient" },
+      { name: "Angular 17", color: "angular-text-gradient" },
+      { name: ".NET 8", color: "dotnet-text-gradient" },
+      { name: "Azure Service Bus", color: "azure-servicebus-text-gradient" },
+      { name: "Azure AD", color: "azure-text-gradient" },
     ],
 
     image: fsm,
@@ -228,18 +225,15 @@ export const projects = [
     name: "EVN Online",
 
     description:
-      "Customer-facing web platform enabling electricity bill management, payment tracking, and service requests. Built to improve digital accessibility and streamline customer support processes.",
+      "Customer web platform for electricity bill management, payments, and service requests, built with Angular and .NET 8 REST APIs.",
 
     tags: [
-      { name: "Angular 17", color: "blue-text-gradient" },
-
-      { name: ".NET 8", color: "green-text-gradient" },
-
-      { name: "REST API", color: "pink-text-gradient" },
+      { name: "Angular 17", color: "angular-text-gradient" },
+      { name: ".NET 8", color: "dotnet-text-gradient" },
+      { name: "SQL Server", color: "sqlserver-text-gradient" },
     ],
 
     image: evnonline,
-
     source_code_link: "https://evnonline.mk/index/evnhome",
   },
 
@@ -247,18 +241,15 @@ export const projects = [
     name: "Customer Service Portal",
 
     description:
-      "Modern web portal for handling electricity service requests with real-time status tracking and structured backend workflows. Focused on performance, security, and clean architecture principles.",
+      "Blazor WebAssembly portal for managing electricity service requests with Azure AD authentication and structured backend workflows.",
 
     tags: [
-      { name: "Blazor WebAssembly", color: "blue-text-gradient" },
-
-      { name: ".NET 8", color: "green-text-gradient" },
-
-      { name: "Entity Framework Core", color: "pink-text-gradient" },
+      { name: "Blazor WebAssembly", color: "blazor-text-gradient" },
+      { name: ".NET 8", color: "dotnet-text-gradient" },
+      { name: "Azure AD", color: "azure-text-gradient" },
     ],
 
     image: dso,
-
     source_code_link: "https://online.elektrodistribucija.mk/",
   },
 
@@ -266,16 +257,12 @@ export const projects = [
     name: "Inspection & Asset Management",
 
     description:
-      "Internal system for managing infrastructure assets, inspection workflows, and field reporting. Integrated with Power BI dashboards to generate operational analytics and performance insights.",
+      "Internal system for managing infrastructure assets and inspections, integrated with Power BI dashboards for operational insights.",
 
     tags: [
-      { name: "Blazor Server", color: "blue-text-gradient" },
-
-      { name: ".NET 8", color: "green-text-gradient" },
-
+      { name: "Blazor Server", color: "blazor-text-gradient" },
       { name: "MudBlazor", color: "pink-text-gradient" },
-
-      { name: "Power BI", color: "orange-text-gradient" },
+      { name: "Power BI", color: "powerbi-text-gradient" },
     ],
 
     image: inspection,
@@ -285,13 +272,11 @@ export const projects = [
     name: "Outage Analytics Platform",
 
     description:
-      "Data-driven platform providing statistical insights on electricity outages across regions. Built to support infrastructure planning and faster incident response.",
+      "Analytics platform providing statistical insights on electricity outages to support planning and faster incident response.",
 
     tags: [
-      { name: "Blazor", color: "blue-text-gradient" },
-
-      { name: ".NET 8", color: "green-text-gradient" },
-
+      { name: "Blazor", color: "blazor-text-gradient" },
+      { name: ".NET 8", color: "dotnet-text-gradient" },
       { name: "Data Visualization", color: "pink-text-gradient" },
     ],
 
@@ -302,47 +287,31 @@ export const projects = [
     name: "Library Management System",
 
     description:
-      "Full-stack academic project for managing books, user accounts, borrowing workflows, and reporting. Implemented role-based access control and relational database modeling.",
+      "Full-stack academic project for managing books, users, and borrowing workflows with role-based access control.",
 
     tags: [
-      { name: "Spring Boot 3", color: "green-text-gradient" },
-
-      { name: "Angular 17", color: "pink-text-gradient" },
-
-      { name: "PostgreSQL", color: "blue-text-gradient" },
+      { name: "Spring Boot 3", color: "spring-text-gradient" },
+      { name: "Angular 17", color: "angular-text-gradient" },
+      { name: "PostgreSQL", color: "postgresql-text-gradient" },
     ],
 
     image: library,
     source_code_link: "https://github.com/mkjasha/Library-Management-System",
   },
-
+  { name: "Personal Portfolio", description: "My personal portfolio website showcasing projects, skills, and experience. Built with modern web technologies, responsive design, and interactive UI components to highlight my work effectively.", tags: [{ name: "React.js", color: "blue-text-gradient" }, { name: "Tailwind CSS", color: "pink-text-gradient" }, { name: "TypeScript", color: "orange-text-gradient" }, { name: "GSAP", color: "green-text-gradient" },], image: portfolio, source_code_link: "https://github.com/hamzajashari/portfolio", },
   {
-  name: "Insurance Claims Management API",
+    name: "Insurance Claims Management API",
 
-  description:
-    "Production-ready multi-tier ASP.NET Core Web API for managing insurance claims and covers. Implemented Clean Architecture, service layer abstractions, repository pattern, progressive premium calculation logic, and asynchronous auditing using Azure Service Bus with background processing.",
-
-  tags: [
-    { name: "asp.net-core", color: "green-text-gradient" },
-    { name: "azure-service-bus", color: "pink-text-gradient" },
-    { name: "clean-architecture", color: "blue-text-gradient" },
-  ],
-
-  image: insuranceApi,
-
-  source_code_link: "https://github.com/hamzajashari/Insurance",
-},
- {
-    name: "Personal Portfolio",
     description:
-      "My personal portfolio website showcasing projects, skills, and experience. Built with modern web technologies, responsive design, and interactive UI components to highlight my work effectively.",
+      "ASP.NET Core Web API built with Clean Architecture for managing insurance claims, featuring background processing with Azure Service Bus.",
+
     tags: [
-      { name: "React.js", color: "blue-text-gradient" },
-      { name: "Tailwind CSS", color: "pink-text-gradient" },
-      { name: "TypeScript", color: "orange-text-gradient" },
-      { name: "GSAP", color: "green-text-gradient" },
+      { name: "ASP.NET Core", color: "dotnet-text-gradient" },
+      { name: "Azure Service Bus", color: "azure-servicebus-text-gradient" },
+      { name: "Clean Architecture", color: "architecture-text-gradient" },
     ],
-    image: portfolio,
-    source_code_link: "https://github.com/hamzajashari/portfolio",
+
+    image: insuranceApi,
+    source_code_link: "https://github.com/hamzajashari/Insurance",
   },
 ];
