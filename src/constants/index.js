@@ -24,6 +24,7 @@ import {
   library,
   insuranceApi,
   portfolio,
+  inxhi,
 } from "../assets";
 
 export const navLinks = [
@@ -299,6 +300,23 @@ export const projects = [
     source_code_link: "https://github.com/mkjasha/Library-Management-System",
   },
   { name: "Personal Portfolio", description: "My personal portfolio website showcasing projects, skills, and experience. Built with modern web technologies, responsive design, and interactive UI components to highlight my work effectively.", tags: [{ name: "React.js", color: "blue-text-gradient" }, { name: "Tailwind CSS", color: "pink-text-gradient" }, { name: "TypeScript", color: "orange-text-gradient" }, { name: "GSAP", color: "green-text-gradient" },], image: portfolio, source_code_link: "https://github.com/hamzajashari/portfolio", },
+  {
+    name: "Inxhi Çejz",
+
+    description:
+      "E-commerce platform for Albanian heritage products (çejz), built with Astro 5 and React 19. Features a headless CMS via Contentful, full Albanian localization targeting the Skopje market.",
+
+    tags: [
+      { name: "Astro 5", color: "orange-text-gradient" },
+      { name: "React 19", color: "blue-text-gradient" },
+      { name: "Contentful CMS", color: "pink-text-gradient" },
+      { name: "Tailwind CSS", color: "green-text-gradient" },
+    ],
+
+    image: inxhi,
+    source_code_link: "https://inxhi.com/",
+  },
+
   {
     name: "Insurance Claims Management API",
 

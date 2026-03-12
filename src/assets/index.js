@@ -39,6 +39,7 @@ import outage from "./project/outage.png";
 import library from "./project/library.png";
 import insuranceApi from "./project/insuranceApi.png";
 import portfolio from "./project/portfolio.png";
+import inxhi from "./project/inxhi.png";
 import link from "./link.png";
 
 import sql from "./tech/sql.png";
@@ -86,5 +87,6 @@ export {
   tesla,
   carrent,
   jobit,
-  tripguide
+  tripguide,
+  inxhi
 };
